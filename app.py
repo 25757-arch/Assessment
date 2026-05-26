@@ -14,3 +14,5 @@ def print_all_gpu():
     sql = "SELECT * FROM gpu;" #set an sql query
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
+    #print format
+    print (results) #For the first test, the data was shown in a continuous style disorderly
