@@ -12,3 +12,4 @@ def print_all_gpu():
     cursor = db.cursor() #build a cursor then have the access to operate the data
     #sql statement
     sql = "SELECT * FROM gpu;" #set an sql query
+    cursor.execute(sql) #execute sql that was just created
