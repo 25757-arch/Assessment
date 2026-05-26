@@ -13,3 +13,4 @@ def print_all_gpu():
     #sql statement
     sql = "SELECT * FROM gpu;" #set an sql query
     cursor.execute(sql) #execute sql that was just created
+    results = cursor.fetchall() #fetch all results
