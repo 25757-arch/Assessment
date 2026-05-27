@@ -37,3 +37,4 @@ def print_all_gpu_by_vram():
     for gpu in results:  
         print(f"{gpu[1]:<15}{gpu[2]:<15}{gpu[3]:<10}{gpu[4]:<10}{gpu[5]:<10}") 
     db.close() #loop finished here
+print_all_gpu_by_vram()
