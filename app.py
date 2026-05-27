@@ -65,4 +65,19 @@ def print_all_gpu_by_price():
     for gpu in results:  
         print(f"{gpu[1]:<15}{gpu[2]:<15}{gpu[3]:<10}{gpu[4]:<10}{gpu[5]:<10}") 
     db.close() #loop finished here
-print_all_gpu_by_price()
+
+#main code
+while True:
+    user_input = input("\nWhat would you like to do.\n1. Print all gpu.\n2. Print all gpu sorted by vram.\n3. Print all gpu sorted by speed.\n4. Print all gpu sorted by price.\n5. Exit\n")
+    if user_input == "1":
+        print_all_gpu()
+    elif user_input == "2":
+        print_all_gpu_by_vram()
+    elif user_input == "3":
+        print_all_gpu_by_speed()
+    elif user_input == "4":
+        print_all_gpu_by_price()
+    elif user_input == "5":
+        break
+    else:
+        print("That was not an option.")
