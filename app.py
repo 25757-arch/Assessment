@@ -37,4 +37,18 @@ def print_all_gpu_by_vram():
     for gpu in results:  
         print(f"{gpu[1]:<15}{gpu[2]:<15}{gpu[3]:<10}{gpu[4]:<10}{gpu[5]:<10}") 
     db.close() #loop finished here
-print_all_gpu_by_vram()
+
+#print all the gpu sorted by speed
+def print_all_gpu_by_speed():
+    db = sqlite3.connect(DATABASE) #connect to sqlite3 database
+    cursor = db.cursor() #build a cursor then have the access to operate the data
+    #sql statement
+    sql = "SELECT * from gpu ORDER by speed DESC;" #set an sql query
+    cursor.execute(sql) #execute sql that was just created
+    results = cursor.fetchall() #fetch all results
+    #print format
+    print("brand          model          vram      speed     price     ") #add title on the first line
+    for gpu in results:  
+        print(f"{gpu[1]:<15}{gpu[2]:<15}{gpu[3]:<10}{gpu[4]:<10}{gpu[5]:<10}") 
+    db.close() #loop finished here
+print_all_gpu_by_speed()
