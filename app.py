@@ -15,4 +15,7 @@ def print_all_gpu():
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
     #print format
-    print (results) #For the first test, the data was shown in a continuous style disorderly
+    #print (results) #For the first test, the data was shown in a continuous style disorderly
+    # loop through all the results
+    for gpu in results:
+        print(gpu) #For the second test, the data is displayed in columns, separated by commas, with parentheses at the beginning and end.
