@@ -18,4 +18,5 @@ def print_all_gpu():
     #print (results) #For the first test, the data was shown in a continuous style disorderly
     # loop through all the results
     for gpu in results:
-        print(gpu) #For the second test, the data is displayed in columns, separated by commas, with parentheses at the beginning and end.
+        #print(gpu) #For the second test, the data is displayed in columns, separated by commas, with parentheses at the beginning and end.
+        print(f"{fighter[1]}{fighter[2]}{fighter[3]}{fighter[4]}{fighter[5]}") #For the third test, the data is displayed in columns, no symbols separate, no parentheses.
