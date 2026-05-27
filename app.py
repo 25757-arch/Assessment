@@ -6,6 +6,7 @@ import sqlite3
 DATABASE = "GPUS.db"
 FORMAT_STR = "{:<15}{:<15}{:<10}{:<10}{:<10}" #set a variable to avoid magic numbers
 
+
 '''functions'''
 #print all the gpu nicely
 def print_all_gpu():
@@ -16,6 +17,7 @@ def print_all_gpu():
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
     #print format
+    print("\nPrint all gpu: ") #add title
     print("brand          model          vram      speed     price     ") #add title on the first line
     #print (results) #For the first test, the data was shown in a continuous style disorderly
     # loop through all the results
@@ -35,6 +37,7 @@ def print_all_gpu_by_vram():
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
     #print format
+    print("\nPrint all gpu by vram:")
     print("brand          model          vram      speed     price     ") #add title on the first line
     for gpu in results:  
         print(FORMAT_STR.format(gpu[1], gpu[2], gpu[3], gpu[4], gpu[5]))
@@ -49,6 +52,7 @@ def print_all_gpu_by_speed():
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
     #print format
+    print("\nPrint all gpu by speed:")
     print("brand          model          vram      speed     price     ") #add title on the first line
     for gpu in results:  
         print(FORMAT_STR.format(gpu[1], gpu[2], gpu[3], gpu[4], gpu[5]))
@@ -63,6 +67,7 @@ def print_all_gpu_by_price():
     cursor.execute(sql) #execute sql that was just created
     results = cursor.fetchall() #fetch all results
     #print format
+    print("\nPrint all gpu by price:")
     print("brand          model          vram      speed     price     ") #add title on the first line
     for gpu in results:  
         print(FORMAT_STR.format(gpu[1], gpu[2], gpu[3], gpu[4], gpu[5]))
